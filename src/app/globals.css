@@ -1,8 +1,19 @@
 @import "tailwindcss";
 
+@font-face{
+  font-family: doggie;
+  src: url(Doggie.otf);
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
+
+  --primary: #d0b8ac;
+  --secondary: #f3d8c7;
+  --tertiary: #efe5dc;
+  --font-primary: #fbfefb;
+  --font-secondary: #ffffff;
 }
 
 @theme inline {
@@ -10,6 +21,14 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-tertiary: var(--tertiary);
+  --color-fontPrimary: var(--font-primary);
+  --color-fontSecondary: var(--font-secondary);
+
+  --font-doggie: doggie;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -23,8 +42,13 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  
 }
 
 #hero {
-  background-image: url(/stock_dog.jpg);
+  background-color: var(--primary);
+  background-image: url(/stock_dog_medium.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode: multiply;
 }
