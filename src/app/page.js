@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import backgroundImage from "../../public/stock_dog_medium.jpg";
+import GlobalConfig from './app.config.js'
 
 export default function Home() {
   return (
@@ -19,7 +20,7 @@ function Hero() {
         <div id="hero" className="w-full"
         style={{
             backgroundImage: `url(${backgroundImage.src})`,
-            backgroundColor: "#d0b8ac",
+            backgroundColor: GlobalConfig.primary,
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",
             backgroundBlendMode: "multiply",
