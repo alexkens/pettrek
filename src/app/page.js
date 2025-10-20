@@ -31,8 +31,9 @@ function Hero() {
                 <ul className="flex justify-center items-center gap-3">
                     <li className="px-2 hover:outline-[1px] rounded-md"><a href="">About</a></li>
                     <li className="px-2 hover:outline-[1px] rounded-md"><Link href="/planner">Planner</Link></li>
+                    <li className="px-2 hover:outline-[1px] rounded-md"><a href="">Routes</a></li>
+                    <li className="px-2 hover:outline-[1px] rounded-md"><a href="">MyRoutes</a></li>
                     <li className="px-2 hover:outline-[1px] rounded-md"><a href="">Login</a></li>
-                    <li className="px-2 hover:outline-[1px] rounded-md"><a href="">Imprint</a></li>
                 </ul>
             </nav>
 

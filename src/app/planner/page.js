@@ -6,10 +6,66 @@ import 'maplibre-gl/dist/maplibre-gl.css';
 
 export default function Planner() {
     return (
-        <div>
-            <div>dumelang my banana pie jizzers!</div>
+        <div className="flex gap-1">
+            <Sidebar></Sidebar>
             <Map />
         </div>
+    );
+}
+
+function Sidebar() {
+    return (
+        <aside className='w-[38.2%] flex flex-col items-center gap-4 my-6'>
+            <search>
+                <form className='flex'>
+                    <label></label>
+                    <input className='border' type="search" placeholder='start'></input>
+                    <button className='w-10' type="submit"><img src='pettrek_logo.png'></img></button>
+                </form>
+            </search>
+
+            <search>
+                <form className='flex'>
+                    <label></label>
+                    <input className='border' type="search" placeholder='end'></input>
+                    <button className='w-10' type="submit"><img src='pettrek_logo.png'></img></button>
+                </form>
+            </search>
+
+            <div className='flex'>
+                <h2>Route Type</h2>
+                <select type='radio'></select>
+            </div>
+
+            <div className='flex'>
+                <h2>Mode</h2>
+                <select type='radio'></select>
+            </div>
+
+            <div id='stats'>
+                <h1 className='text-center'>stats</h1>
+                <hr></hr>
+                <div className='flex gap-4'>
+                    <div id='time'>
+                        <img></img>
+                        <div id='value'>0 min</div>
+                    </div>
+                    <div id='distance'>
+                        <img></img>
+                        <div id='value'>0 m</div>
+                    </div>
+                    <div id='high'>
+                        <img></img>
+                        <div id='value'>0 m</div>
+                    </div>
+                    <div id='low'>
+                        <img></img>
+                        <div id='value'>0 m</div>
+                    </div>
+                </div>
+                <hr></hr>
+            </div>
+        </aside>
     );
 }
 

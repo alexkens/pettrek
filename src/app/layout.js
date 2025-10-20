@@ -32,7 +32,16 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
+        <Footer />
       </body>
     </html>
   );
+}
+
+function Footer() {
+    return (
+        <div className="py-10 text-black">
+            Footer
+        </div>
+    );
 }
