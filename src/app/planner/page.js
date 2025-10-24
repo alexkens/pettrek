@@ -75,12 +75,32 @@ function Map() {
     useEffect(() => {
         if (!mapContainer.current) return;
 
+        const styleURL = 'https://demotiles.maplibre.org/style.json';
+        const styleURLVersaTiles = 'https://tiles.versatiles.org/assets/styles/colorful/style.json';
+        const berlinCoord = [13.404954, 52.520008];
+
         const map = new maplibregl.Map({
-            container: mapContainer.current,
-            style: 'https://tiles.versatiles.org/assets/styles/colorful/style.json',
-            center: [0, 0],
-            zoom: 3
+            container: mapContainer.current, // container id
+            style: styleURL, // style URL
+            center: berlinCoord, // starting position [lng, lat]
+            zoom: 5, // starting zoom
+            maplibreLogo: true,
         });
+
+        let popup = new maplibregl.Popup({closeOnClick: true})
+            .setText("Home")
+            .setLngLat(berlinCoord)
+            .addTo(map);
+
+
+        let marker = new maplibregl.Marker({
+            color: "#facdfb",
+            draggable: true,
+        })
+            .setLngLat(berlinCoord)
+            .addTo(map);
+
+
 
         return () => map.remove(); // cleanup on unmount
     }, []);
