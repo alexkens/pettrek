@@ -5,6 +5,7 @@ import maplibregl from 'maplibre-gl';
 import 'maplibre-gl/dist/maplibre-gl.css';
 
 export default function Planner() {
+
     return (
         <div className="flex gap-1">
             <Sidebar></Sidebar>
@@ -71,39 +72,48 @@ function Sidebar() {
 
 function Map() {
     const mapContainer = useRef(null);
+    const mapRef = useRef(null);
 
     useEffect(() => {
+
+        var location = [13.404954, 52.520008];
+        if ("geolocation" in window.navigator) {
+            navigator.geolocation.getCurrentPosition((position) => {
+                // location = new maplibregl.LngLat(position.coords.longitude, position.coords.latitude);
+                location = [position.coords.longitude, position.coords.latitude];
+            });
+            
+        }
+
         if (!mapContainer.current) return;
 
-        const styleURL = 'https://demotiles.maplibre.org/style.json';
-        const styleURLVersaTiles = 'https://tiles.versatiles.org/assets/styles/colorful/style.json';
-        const berlinCoord = [13.404954, 52.520008];
+        const tilesURL = 'https://tiles.openfreemap.org/styles/liberty';
 
-        const map = new maplibregl.Map({
+        mapRef.current = new maplibregl.Map({
             container: mapContainer.current, // container id
-            style: styleURL, // style URL
-            center: berlinCoord, // starting position [lng, lat]
-            zoom: 5, // starting zoom
+            style: tilesURL, // style URL
+            center: location, // starting position [lng, lat]
+            zoom: 8, // starting zoom
             maplibreLogo: true,
         });
 
         let popup = new maplibregl.Popup({closeOnClick: true})
             .setText("Home")
-            .setLngLat(berlinCoord)
-            .addTo(map);
+            .setLngLat(location)
+            .addTo(mapRef.current);
 
 
         let marker = new maplibregl.Marker({
             color: "#facdfb",
             draggable: true,
         })
-            .setLngLat(berlinCoord)
-            .addTo(map);
+            .setLngLat(location)
+            .addTo(mapRef.current);
 
 
 
-        return () => map.remove(); // cleanup on unmount
-    }, []);
+        return () => mapRef.current?.remove(); // cleanup on unmount
+    }, []); // dependency array
 
     return (
         <div
