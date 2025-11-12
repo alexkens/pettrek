@@ -21,27 +21,50 @@ function Sidebar() {
                 <form className='flex'>
                     <label></label>
                     <input className='border' type="search" placeholder='start'></input>
-                    <button className='w-10' type="submit"><img src='pettrek_logo.png'></img></button>
+                    <button className='w-10' type="submit"><img className='w-10' src='down-arrow-5-svgrepo-com.svg'></img></button>
                 </form>
             </search>
+
 
             <search>
                 <form className='flex'>
                     <label></label>
                     <input className='border' type="search" placeholder='end'></input>
-                    <button className='w-10' type="submit"><img src='pettrek_logo.png'></img></button>
+                    <button className='w-10' type="submit"><img className='w-6 ml-2' src='circle-dashed-svgrepo-com.svg'></img></button>
                 </form>
             </search>
 
-            <div className='flex'>
-                <h2>Route Type</h2>
-                <select type='radio'></select>
-            </div>
+            <form action="/action_page.php">
+                <label for="route-type">Route Type: </label>
+                <select name="route-type" id="route-type">
+                    <option value="one-way">One-Way</option>
+                    <option value="round-trip">Round-Trip</option>
+                </select>
+            </form>
 
-            <div className='flex'>
-                <h2>Mode</h2>
-                <select type='radio'></select>
-            </div>
+            <form action="/action_page.php">
+                <label for="mode">Mode: </label>
+                <select name="mode" id="mode">
+                    <option value="walking">Walking</option>
+                    <option value="biking">Biking</option>
+                </select>
+            </form>
+
+            <search>
+                <form className='flex'>
+                    <label for="time">Time: </label>
+                    <input className='border w-15' id="time" value="20"></input>
+                    <label for="time">min</label>
+                </form>
+            </search>
+
+            <search>
+                <form className='flex'>
+                    <label for="distance">Distance: </label>
+                    <input className='border w-15' id="distance" value="1"></input>
+                    <label for="distance">km</label>
+                </form>
+            </search>
 
             <div id='stats'>
                 <h1 className='text-center'>stats</h1>
@@ -82,7 +105,6 @@ function Map() {
                 // location = new maplibregl.LngLat(position.coords.longitude, position.coords.latitude);
                 location = [position.coords.longitude, position.coords.latitude];
             });
-            
         }
 
         if (!mapContainer.current) return;

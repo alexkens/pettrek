@@ -41,15 +41,15 @@ export default function RootLayout({ children }) {
 
 function Footer() {
     return (
-        <div className="w-full gap-5 py-6 text-black font-doggie underline" style={{
+        <div className="w-full gap-5 py-6 text-black font-doggie" style={{
             backgroundColor: GlobalConfig.primary,
         }}>
             <nav>
                 <ul className='flex justify-evenly text-xs'>
-                    <li><a className="hover:text-white hover:underline hover:decoration-white" href="#">Contact</a></li>
-                    <li><a className="hover:text-white hover:underline hover:decoration-white" href="#">Copyright</a></li>
-                    <li><a className="hover:text-white hover:underline hover:decoration-white" href="#">Imprint</a></li>
-                    <li><a className="hover:text-white hover:underline hover:decoration-white" href="https://github.com/alexkens/pettrek" target="_blank">Source Code</a></li>
+                    <li><a className="underline hover:text-white hover:underline hover:decoration-white" href="#">Contact</a></li>
+                    <li className="no-underline decoration-0">pettrek 2025</li>
+                    <li><a className="underline hover:text-white hover:underline hover:decoration-white" href="#">Imprint</a></li>
+                    <li><a className="underline hover:text-white hover:underline hover:decoration-white" href="https://github.com/alexkens/pettrek" target="_blank">Source Code</a></li>
                 </ul>
             </nav>
         </div>
