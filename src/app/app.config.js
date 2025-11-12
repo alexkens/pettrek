@@ -4,4 +4,5 @@ module.exports = {
     tertiary: "#efe5dc",
     fontPrimary: "#fbfefb",
     fontSecondary: "#ffffff",
+    fontDark: "# B29180",
 }
