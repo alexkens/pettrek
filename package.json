@@ -9,7 +9,11 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "cors": "^2.8.6",
     "maplibre-gl": "^5.9.0",
+    "micro-cors": "^0.1.1",
+    "mongodb": "^7.0.0",
+    "mongoose": "^9.1.5",
     "next": "15.5.4",
     "react": "19.1.0",
     "react-dom": "19.1.0"

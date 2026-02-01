@@ -1,0 +1,102 @@
+[
+  {
+    "name": "Tiergarten Dog Park",
+    "latitude": 52.5200,
+    "longitude": 13.3373
+  },
+  {
+    "name": "Volkspark Friedrichshain",
+    "latitude": 52.5111,
+    "longitude": 13.4553
+  },
+  {
+    "name": "Treptower Park",
+    "latitude": 52.4950,
+    "longitude": 13.4589
+  },
+  {
+    "name": "Potsdam Square Dog Area",
+    "latitude": 52.5058,
+    "longitude": 13.3656
+  },
+  {
+    "name": "Charlottenburg Palace Park",
+    "latitude": 52.5200,
+    "longitude": 13.2950
+  },
+  {
+    "name": "Grunewald Forest",
+    "latitude": 52.4658,
+    "longitude": 13.2553
+  },
+  {
+    "name": "Spandauer Forst",
+    "latitude": 52.5847,
+    "longitude": 13.1975
+  },
+  {
+    "name": "Müggel Forest",
+    "latitude": 52.4469,
+    "longitude": 13.6469
+  },
+  {
+    "name": "Rummelsburger Bucht",
+    "latitude": 52.4789,
+    "longitude": 13.4983
+  },
+  {
+    "name": "Tegeler Forst",
+    "latitude": 52.5989,
+    "longitude": 13.2989
+  },
+  {
+    "name": "Blankenfelde Forest",
+    "latitude": 52.3875,
+    "longitude": 13.5222
+  },
+  {
+    "name": "Köpenicker Forst",
+    "latitude": 52.4286,
+    "longitude": 13.6347
+  },
+  {
+    "name": "Jungfernheide Park",
+    "latitude": 52.5333,
+    "longitude": 13.3003
+  },
+  {
+    "name": "Kreuzberg Dog Park",
+    "latitude": 52.5002,
+    "longitude": 13.3906
+  },
+  {
+    "name": "Tempelhof Field",
+    "latitude": 52.4733,
+    "longitude": 13.4050
+  },
+  {
+    "name": "Pankow Forest",
+    "latitude": 52.5914,
+    "longitude": 13.4011
+  },
+  {
+    "name": "Spreepark",
+    "latitude": 52.5022,
+    "longitude": 13.4189
+  },
+  {
+    "name": "Biesdorf Forest",
+    "latitude": 52.4825,
+    "longitude": 13.5650
+  },
+  {
+    "name": "Plötzensee Park",
+    "latitude": 52.5303,
+    "longitude": 13.3364
+  },
+  {
+    "name": "Lübars Forest",
+    "latitude": 52.6556,
+    "longitude": 13.3628
+  }
+]
